@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4413411861392451536}
-  - component: {fileID: 4413411861392451539}
+  - component: {fileID: 3871667398795140029}
   m_Layer: 0
   m_Name: Lego analyser
   m_TagString: Untagged
@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4413411861392451538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.9, y: 20, z: 115}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4413411861392451539
+--- !u!114 &3871667398795140029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,21 +40,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 4413411861392451538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d54bc4418447154db4a2d73ff58fd37, type: 3}
+  m_Script: {fileID: 11500000, guid: acd33f7c615b0a04ab9f9f2145e119e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   legoMapSize: {x: 100, y: 100}
-  analyserHeight: 25
+  analyserHeight: 10
   scale: 1
   verticalScaleMultiplicator: 1
   collisionMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  setGroundAt0: 1
+    m_Bits: 0
+  setGroundAt0: 0
   analyzerColor: {r: 1, g: 0, b: 0, a: 0.5}
-  singleLegoColor: {r: 0, g: 1, b: 1, a: 0.5}
-  fileName: Test
+  singleLegoColor: {r: 0, g: 1, b: 1, a: 1}
+  fileName: lego_map
   exportToCSV: 0
   folderName: lego_map
-  delimiter: ;
+  delimiter: ','
   legoTileSize: 32

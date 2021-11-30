@@ -127,8 +127,6 @@ public class LegoAnalyser : MonoBehaviour
             new Vector3(legoMapSize.x * scale, analyserHeight, legoMapSize.y * scale)
         );
 
-        Debug.Log(analyzerColor);
-
         singleLegoColor = new Color(1-analyzerColor.r , 1-analyzerColor.g , 1-analyzerColor.b, 1);
         Gizmos.color = singleLegoColor;
         Gizmos.DrawCube(
