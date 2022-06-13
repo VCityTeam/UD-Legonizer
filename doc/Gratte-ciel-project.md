@@ -1,5 +1,15 @@
-## Gratte-ciel project
+# Gratte-ciel project
+The objective of the Gratte-ciel project was to bring together a generation of multidisciplinary students to propose ideas and solutions. The means of action made available to them in order to formulate original proposals are as follows: the implementation of multidisciplinarity, a field of experimentation (the Gratte Ciel Centre district in Villeurbanne), support from experts (researchers, experts from SERL and local authorities), the exploration of territorial mediations through the visualisation of data and augmented models in order to make simple and practical proposals tangible and shareable.
 
+All CSV files to build the lego models are available [here](https://github.com/VCityTeam/UD-Legonizer/tree/master/doc/csv-files/Gratte-Ciel).
+
+![IMG20220504130959](https://user-images.githubusercontent.com/32339907/173326914-703d28ed-6511-4a1c-a025-27554069ec96.jpg)
+
+
+
+***
+
+## Model construction :
 ### Data used :
 We used the data available on the OpenDataGrandLyon website to produce the Lego model of the Gratte-ciel district (Lyon)
 [Villeurbanne 2018 CityGML](https://data.grandlyon.com/jeux-de-donnees/maquettes-3d-texturees-2018-communes-metropole-lyon/donnees)
