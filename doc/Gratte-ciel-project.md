@@ -31,7 +31,7 @@ Once the 3D model is integrated into the Unity scene:
   * Get the algorithm [Legonizer](https://github.com/VCityTeam/UD-Legonizer/tree/master/Unity) for integrate it in the scene. The github project is composed of 2 algorithms: The Lego analyzer which will transform your 3D Unity modelisation into a Lego CSV grid and the voxel generator which will allow you to pre-visualise if the CSV files are well conformed by giving you a numerical model of what the Lego city will be.
   * Configure the legonizer to match the lego model you want to generate:
     * Tiles number (x and y parameters)
-    * TSize of the lego tile
+    * Size of the lego tile
     * Positioning on the 3D model of the city
     * Reducing height as lego is not a perfect cube and can accentuate building heights
     
