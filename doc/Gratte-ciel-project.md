@@ -1,30 +1,34 @@
 ## Gratte-ciel project
 
 ### Data used :
-Nous avons utilisé les données disponibles sur le site OpenDataGrandLyon pour produire la maquette Lego du quartier Gratte-ciel (Lyon)
+We used the data available on the OpenDataGrandLyon website to produce the Lego model of the Gratte-ciel district (Lyon)
 [Villeurbanne 2018 CityGML](https://data.grandlyon.com/jeux-de-donnees/maquettes-3d-texturees-2018-communes-metropole-lyon/donnees)
 
 ### Step to construct Lego model
 #### Parsing data
-* Dans un premier temps récupérer les données CityGML de votre ville qui vont vous permettre de la transformer en Lego par la suite. Dans ce use-case nous avons utilisé les données cityGML de Vulleurbanne disponible en opensource sur [DataGrandLyon](https://data.grandlyon.com/jeux-de-donnees/maquettes-3d-texturees-2018-communes-metropole-lyon/donnees). 
-* Lancez le projet github [Unity CityGML Parser](https://github.com/VCityTeam/UD-CityGMLParser):
-  * Le projet comprend un script C# qui va vous permettre de prendre en entrée des données CityGML et de les visualiser en 3D dans une scène 3D Unity. Grâce à cette visualisation vous allez pouvoir vérifier que la modélisation correspond bien à vos attentes pour la construction de la maquette et elle va vous servir pour la transformation en Lego. 
-  * Créez un [GameObject Unity](https://docs.unity3d.com/ScriptReference/GameObject.html) dans une nouvelle scène 3D. Sur ce Gameobject ajoutez le composent script _CreateCity.cs_ qui est le script pour construise le modèle 3D de votre Ville.
+* First, get the CityGML data of your city which will allow you to transform it into Lego later. In this use-case we have used the Villeurbanne cityGML data available in opensource on [DataGrandLyon](https://data.grandlyon.com/jeux-de-donnees/maquettes-3d-texturees-2018-communes-metropole-lyon/donnees). 
+* Launch the github project [Unity CityGML Parser](https://github.com/VCityTeam/UD-CityGMLParser):
+  * The project includes a C# script that will allow you to take CityGML data as input and visualize it in 3D in a Unity scene. Thanks to this visualization you will be able to check that the modeling corresponds to your expectations for the construction of the model and it will be useful for the transformation in Lego. 
+  * Create an [Unity GameObject](https://docs.unity3d.com/ScriptReference/GameObject.html) in a new 3D scene. On this Gameobject add the component script _CreateCity.cs_ which is the script to build the 3D model of your City.
   ![image](https://user-images.githubusercontent.com/32339907/173315079-34de94ba-85e3-47d7-93d8-fb77460096d0.png)
-  * Dans le script, indiquez le chemin de votre CityGML à parser et vous n'avez plus qu'à appuyer sur le bouton _Build City GML_ pour construire votre ville numérique qui vous donnera un apercu dans la scène Unity la modélisation 3D de votre donnée CityGML.
-
+  * In the script, indicate the path of your CityGML to be parsed and you just have to press the _Build City GML_ button to build your digital city which will give you a preview in the Unity scene of the 3D modeling of your CityGML data.
+  
 ![image](https://user-images.githubusercontent.com/32339907/173318229-263a0b37-c5a7-4e34-bd13-994c97094800.png)
 
 
 #### Legonize 3D model
-* Une fois le model 3D intégré dans la scène Unity:
-  * récupérer l'algorithme de [Legonizer](https://github.com/VCityTeam/UD-Legonizer/tree/master/Unity) pour l'intégrer dans la scène. Le projet github est composé de 2 algorithme :  Le Lego analyzer qui va transformer votre modelisation 3D Unity en grille CSV Lego et Le voxel generator qui va vous permettre de pré-visualizer si les fichiers CSV sont bien conforme en vous donnant une modélisation numérique de ce que va être la ville en Lego.
-  * Configurez le legonizer pour qu'il corresponde à la maquette lego que vous voulez générer :
-    * Nombre de tuiles
-    * Taille de la tuille
-    * Positionnement sur le model 3D de la ville
-    * Hauteur reducteur car le lego n'est pas un cube parfait et peux accentuer les hauteurs de bâtiments
-  * Le legonizer va vous produire les fichiers CSV par tuile de Lego et découper votre maquette en matrice que vous avez configuré. Le noms des CSV correspond à la position ou va se trouver votre tuile dans votre maquette Lego. 
+Once the 3D model is integrated into the Unity scene:
+  * Get the algorithm [Legonizer](https://github.com/VCityTeam/UD-Legonizer/tree/master/Unity) for integrate it in the scene. The github project is composed of 2 algorithms: The Lego analyzer which will transform your 3D Unity modelisation into a Lego CSV grid and the voxel generator which will allow you to pre-visualise if the CSV files are well conformed by giving you a numerical model of what the Lego city will be.
+  * Configure the legonizer to match the lego model you want to generate:
+    * Tiles number (x and y parameters)
+    * TSize of the lego tile
+    * Positioning on the 3D model of the city
+    * Reducing height as lego is not a perfect cube and can accentuate building heights
+    
+![image](https://user-images.githubusercontent.com/32339907/173321453-045492aa-9acc-4f1e-84ca-8ed2f8806662.png)
+
+  * The legonizer will produce CSV files for each Lego tile and cut your model into the matrix you have configured. The name of the CSV file corresponds to the position of your tile in your Lego model.  
 
 
 ![image](https://user-images.githubusercontent.com/32339907/173313306-bf00ff12-fe7d-4f93-a23c-bb4d513bf4ea.png)
+The CSV files of the Gratte-ciel district (Lyon) are available [here](https://github.com/VCityTeam/UD-Legonizer/tree/master/doc/csv-files/Gratte-Ciel) and were generated for a Lego model of 6x4 lego tiles which is equivalent to a table of 150x100 cm.  
