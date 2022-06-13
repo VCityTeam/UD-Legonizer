@@ -15,7 +15,7 @@ Unity/[Uu]ser[Ss]ettings/
 Unity/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
-!/Unity/[Aa]ssets/**/*.meta
+/Unity/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -44,8 +44,10 @@ Unity/*.booproj
 Unity/*.svd
 Unity/*.pdb
 Unity/*.mdb
+Unity/*.meta
 Unity/*.opendb
 Unity/*.VC.db
+# /Unity/Assets/**/*.meta
 
 # Unity3D generated meta files
 Unity/*.pidb.meta
